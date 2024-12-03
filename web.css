@@ -1,0 +1,168 @@
+/* styles.css */
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the content */
+.content {
+    animation: fadeIn 1.5s ease-in-out; /* Animation name, duration, and timing */
+    opacity: 0; /* Ensure content is initially hidden */
+    animation-fill-mode: forwards; /* Ensure the animation stays in the end state */
+}
+.h1_element{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+ul,h1:hover {
+    transform: scale(1.2); /* scale up the element */
+    top: -10px; /* lift it up slightly */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #006994;
+    color: white;
+    display: flex;
+   justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 0.9em;
+}
+
+.social-links img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.top-info a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-bottom: 5px solid #006994;
+}
+
+.header-main .logo {
+    width: 80px;
+    height: auto;
+}
+
+.header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    color: #003366;
+    margin: 0;
+}
+
+.header-text p {
+    margin: 5px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.navbar {
+    background-color: #003366;
+    overflow: hidden;
+    padding: 14px 30px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    margin: 0 0px;
+    border-radius: 5px;
+    transition: background-color 0.9s ease;
+}
+.navbar :hover {
+    background-color: #45a049;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+/*.navbar ul li {
+    margin: 0 10px;
+}*/
+.navbar li{
+    position: relative;
+}
+
+/*.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}*/
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #005580;
+    border-radius: 10px;
+}
+  /* Dropdown container */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Show dropdown on hover */
+.navbar li:hover .dropdown-content {
+    display: block;
+}
+/* social links */
+.social-links i {
+    font-size: 24px; /* Adjust size */
+    color: #fff; /* White color */
+    margin-right: 10px; /* Spacing between icons */
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+

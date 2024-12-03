@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Animations</title>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+        <style>
+            /* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Rotate in */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animations */
+.header {
+    animation: slideInLeft 1s ease-out;
+}
+
+.image {
+    animation: rotateIn 1.5s ease-in-out;
+}
+
+.text {
+    animation: fadeIn 2s ease-in;
+}
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">Welcome to My Homepage</div>
+<img class="image" src="tambaza.png" alt="Rotating Image">
+<p class="my-element">Discover amazing animations!</p>
+    </body>
+    </html>
